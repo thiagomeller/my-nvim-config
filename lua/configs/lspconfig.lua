@@ -3,7 +3,7 @@ if (not status) then return end
 
 local protocol = require('vim.lsp.protocol')
 
-local on_attach = function(client, bufnr)
+--[[ local on_attach = function(client, bufnr)
   -- format on save
   if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_create_autocmd("BufWritePre", {
@@ -12,7 +12,7 @@ local on_attach = function(client, bufnr)
       callback = function() vim.lsp.buf.formatting_seq_sync() end
     })
   end
-end
+end ]]
 
 -- TypeScript
 nvim_lsp.tsserver.setup {
